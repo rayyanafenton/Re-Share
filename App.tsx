@@ -1,16 +1,15 @@
 import React from "react";
-import { createTheme, ThemeProvider } from "@rneui/themed";
-import Component from "./components/MyComponent";
-
-const theme = createTheme({
-  lightColors: {},
-  darkColors: {},
-});
+import { NavigationContainer } from "@react-navigation/native";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
+import StackNavigators from "./src/navigation/StackNavigator";
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Component />
-    </ThemeProvider>
+      <Provider store={store}>
+        <NavigationContainer>
+          <StackNavigators />
+        </NavigationContainer>
+      </Provider>
   );
 }

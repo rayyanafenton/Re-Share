@@ -2,31 +2,41 @@
   "expo": {
     "name": "Re-Share",
     "slug": "Re-Share",
+    "scheme": "reshare",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "io.expo.client"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.rayy_roff.ReShare"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/images/favicon.png",
+      "bundler": "metro"
+    },
+    "sdkVersion": "49.0.0",
+    "jsEngine": "jsc",
+    "extra": {
+      "eas": {
+        "projectId": "977294bb-203d-44d4-8112-c8f02f120029"
+      }
     }
-  }
+  },
+  "name": "Re-Share"
 }
